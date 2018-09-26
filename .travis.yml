@@ -1,3 +1,8 @@
+language: python
+python:
+- '3.6'
 before_install:
 - openssl aes-256-cbc -K $encrypted_6849ae54def1_key -iv $encrypted_6849ae54def1_iv
   -in cbps.tar.gz.enc -out cbps.tar.gz -d
+script:
+  pip install cbps.tar.gz
