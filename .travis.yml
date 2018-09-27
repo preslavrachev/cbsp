@@ -5,4 +5,4 @@ secure: "F3F1D5EgE1Qa1oU6+KebN7IGP9feOB/QweYai79PIvcjH9BtRU6sqjOr0Ozf3OEmIZTMPRB
 before_install:
 - openssl aes-256-cbc -K $encrypted_6849ae54def1_key -iv $encrypted_6849ae54def1_iv -in cbps.tar.gz.enc -out cbps.tar.gz -d
 install: pip install --upgrade git+https://github.com/preslavrachev/pandas-ta.git && pip install cbps.tar.gz
-script: cbasepro $K $S $P -st $ST
+script: cbasepro $K $S $P -st=$ST
