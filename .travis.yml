@@ -1,8 +1,8 @@
 language: python
 python:
 - '3.6'
+secure: "F3F1D5EgE1Qa1oU6+KebN7IGP9feOB/QweYai79PIvcjH9BtRU6sqjOr0Ozf3OEmIZTMPRBGt/Np7hm8KEnn4hDmx45/EuwA6f2WlsruBo32zIBRlIMPrKY2V7hXSFDSkxPIU803G2bfQykkZyjaQ+1PKQ+/jAka15TAeriByTa30Q1QW4QVngjWRvkUhOQiZkb7fA7XLCNWqqexxdNsMW9nReqfsoh+ZVVUWHNKY2yjhHH1jh+cUsvk+Iiz2ljOpEINWrkCdLMDCcN4ThH2BkhNeluhrTQ+7aZ7nFdDZx39wPHnewgvAEbNbLuvzeZbWmw+TzWcxxPg4aNF5auLpwMmbKviEdK5vhTUdhO/B6HcIYVGA0I0tiiuinfHdyQ+7JRVNmX+12I07+rRAczOjJButu0e4lI7xj5ejen6eBmBMK++1/TZzrVLDWcnZiS+L3MevorbmkKeMGUnGAegaEvRyTfYJ5+GU2t6PgIkQB24hrZ04oEWx4njQVYj8dzx5XZfZsSkEvyTU00B5xIhf8T0jKRRUs14xnxaEEMolNJ52Phm/z2oQlAJVMjT7+doaOFM4Z6R/HNIcoD24XQRA6aP9CaAhrnW1w5CCTDp8m9qPL+ceCB+OHoOg7uWyZDeMy3UANdUOXd5PdoUqFC6iMCuThcmo33d6WL/5EAIWkw="
 before_install:
-- openssl aes-256-cbc -K $encrypted_6849ae54def1_key -iv $encrypted_6849ae54def1_iv
-  -in cbps.tar.gz.enc -out cbps.tar.gz -d
+- openssl aes-256-cbc -K $encrypted_6849ae54def1_key -iv $encrypted_6849ae54def1_iv -in cbps.tar.gz.enc -out cbps.tar.gz -d
 install: pip install --upgrade git+https://github.com/preslavrachev/pandas-ta.git && pip install cbps.tar.gz
-script: cbasepro
+script: cbasepro $K $S $P -st $ST
