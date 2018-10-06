@@ -8,8 +8,8 @@ before_install:
 install: pip install --upgrade git+https://github.com/preslavrachev/pandas-ta.git
   && pip install cbps.tar.gz && pip install eth-typing==1.3.0
 before_script:
-- export TZ=Europe/Berlin  
-script: cbasepro ${K} ${S} ${P} -st=${ST} -ro False
+- export TZ=Europe/Berlin
+script: cbasepro ${K} ${S} ${P} -st=${ST} --read-write
 env:
   global:
   - secure: jVKtiLNVAbDQOthDoCp95a74jeOhdfM2l0E7/3AB0gfxr3Bir408kneB56dX2JjP6eN5EvF8qUenRklPv+dvU3nfvRMKS3/eyb78K8gmuMhTqrTHp/Bey4+lFQ8Rmvjbfmg3ZnyFMF800nWy6WaWVmGaOqXTYwqVPiYS1E9M4kOJLq4H05OayYEhW5qUlS+WPrA0fzZJwj6o2TeodLdSykSbJXxNuTn7c6YFJXtJiWkHxubNvHZ4OwoFLikH2X6kb74CgxjH/seZ1TOhBnDbfRwYFM6gRUFJk/fuXkT5Tdr/8VaEe0M5wAjkfrEu/dok+/3MJbTRvysebn/orpahKaExkwTo5fJrWCzE6ORDtbpQuSwM2tKKYHzL31ZOCuhz/F6lu8YEXtW6nL4mFvI/tcIj+bV7aBdyav1Z+1GW7gy3Gmo4RQRszdqUR7IPtfwPYwgVYijPkFzdXlub/lAosB2ris3SYGCJyVHYsqLRXnInjzNzH6fujWJphKiIYFc14yJ4XLOCDeAYtBWIrS5R3ndM/9HbQsWpkcF7J9LEOWE8qHL+cImMuhbWC75UrVnLHHnsUKb46+N82DsPZK4K+VVSx2UFmS73P4wQqJSX+gR+dvy+QBw2CtIfwkxsGZ/IoZh/k7jlo21XfuOyqM5+UTy+h/FHstpOCr3OjUthnrE=
